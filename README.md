@@ -1,6 +1,6 @@
 # Py Crawl Web Crawler
 
-Implementing a web crawler from first principles.
+Implementing a web crawler from first principles. To be continued...
 
 ### Task:
 

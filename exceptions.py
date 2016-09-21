@@ -1,6 +1,7 @@
 import requests # for specialised http requests
 import urlparse  # for parsing http / https
 import collections # implements specialised container datatypes
+import os # retrieves current working directory
 from lxml import html # used for parsing specific html elements  
 
 # Chosen seed url
@@ -28,7 +29,7 @@ def crawl(seed):
                 break
 
             # Get Response from url data structure at 0 and set timeout to 10 seconds
-            response = requests.get(url, timeout=10)
+            response = requests.get(url)
 
             # If Bad Request then break
             if (response.status_code == 400 or response.status_code == 403 or response.status_code == 404) : 
@@ -68,11 +69,19 @@ def crawl(seed):
 
 
 def output(result):
-     usr_input = str(raw_input("Cnfirm the following $PATH to export results :"  + "\n" + "~/" + 
-        "\n" + " To continue please choose (y/n): ")).lower().strip()
+    rooturl = os.getcwd()
+    usr_input = str(raw_input("Confirm the following $PATH to export results :" + "\n" + rooturl +   
+        "\n" + "To continue please choose (y/n): ")).lower().strip()
     if usr_input[0] == "y":
-        
-
+        try:
+            fout = open('results.txt', 'w')
+        except:
+            print('File cannot be opened:', fname + '.txt')
+            exit()
+        export = str(result)
+        fout.write(export)
+        print 'The following web crawler results have been exported to: ' + rooturl + '/results.txt'
+    
     if usr_input[0] == "n":
         print "Exiting Program..."
         exit()

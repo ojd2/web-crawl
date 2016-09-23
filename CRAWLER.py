@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 # Begin Program:
 def crawl():
 	# Set up root domain also known as the seed
-    seed = "http://lipsum.com"
+    seed = "https://gocardless.com"
     # Confirmation before going any further into hell...
     confirm_depth = str(raw_input("Would you like to crawl the following domain: " + seed + " (y/n): ")).lower().strip()
     
@@ -111,7 +111,7 @@ def exCheck(external_url):
 # algorithm. Using regular expressions we can extract several types of
 # data using certain regular expression patterns.
 def exData(url):
- 	print "-----> Found URL: ", url
+ 	print "|-----> Found URL: ", url
     	try:
         	opener = urllib2.build_opener()
         	opener.addheaders = [('User-agent', 'Mozilla/5.0')]
@@ -123,12 +123,12 @@ def exData(url):
         	# Send any page titles to the printMatch() with the parent url...
         	printMatch(title, url, 'Found Page Title:')
 
+        	# Export both the parent url and the page title together into 
+        	# a list. Extend each time to keep hold of items every time the
+        	# function is called?
         	exp_title = str(title).strip("[]")
     		exp_url = str(url)
     		export = "\n" + "\n".join([exp_url, exp_title]) + "\n"
-
-    		final_export = list(export) # However, keep each item added, not overwrite?
-    		#print export
 
         # If HTTP Request error here, then continue onwards again...
     	except urllib2.HTTPError, e:
@@ -146,21 +146,16 @@ def printMatch(title, url, type):
     matching_data = []
     for title in title_matches:
         if title not in matching_data:
-            matching_data.append(title)
+        	# Add both url and title to matching_data
+            matching_data.extend(title)
             if type == "Found Title Page:":
-                print " ---->", type, title[0]
+                print " ->", type, title[0]
             else:
-            	print " ---->", type, title.get_text()
-    
-    
-    
+            	print " ->", type, title.get_text()    
 
     # Here, I wish to take each item and push this into another data structure to 
     # write the data and export to file...
-    
-
-
-		#exportData(sig, link)
+	#exportData(sig, link)
 	
 #def exportData(data):
 

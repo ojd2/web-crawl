@@ -174,7 +174,7 @@ Using a queue is very helpful in ensuring that there are no duplicate `<a>` html
 
 The program begins with the BFS structure firmly intact and some global variables are created:
 
-```
+```python
 seed = 'http://gocardless.com'
 
 depth_limit = 2
@@ -191,7 +191,7 @@ The `found_urls` is an empty array structure and is used to store all urls found
 
 As the BFS algorithm is implemented iteratively, the algorithm uses a Queue like data structure for its exploration. The queue is used to essentially queue all associated urls found into a uniformed level within the graph and to determine which has been explored and which has not...
 
-```
+```python
 while not queue.empty():
     current_url = queue.get() #retrieve a url from queue
 	if current_url not in found_urls:
@@ -215,7 +215,7 @@ The following function simply extracts hyperlink `<a>` data from a single layer 
 
 This particular function grabs any `<title>` tags found in the single layer of Html of the `current_url`:
 
-```
+```python
 def getLinks(parent_url, seed):
     child_urls = []
     try:
@@ -251,7 +251,7 @@ def getLinks(parent_url, seed):
 
 The `exCheck` function is used to check whether any url found is external. The function simply prints found external links and lists them and as to why they have been deemed as external. The function integrates an comparative analysis / string matcher implementation using a simple array structure. For example, it was noticed early on after one or two tests, that one clear external hyperlink was being found called `support.gocardless.com`. As this url does not follow the same canonical structure of the seed / base url `gocardless.com` - it has been deemed external. This particular function can be scaled upwards, utilising other key html tags such as email addresses, images and any other external information. In addition, it can be very helpful for search engine mechanisms. For now, we are only extracting external urls with the keyword `support`:
 
-```
+```python
 def exCheck(external_url):
     # Set up an array for external keywords found in url(s) from website
     ignore = ['support']
@@ -268,7 +268,7 @@ The following function is used to extract data from every url that comes up in o
 
 To generate a simple sitemap, we shall just extract the url(s) html `<title>` tags:
 
-```
+```python
 def exData(url):
     print "|-----> Found URL: ", url
     try:
@@ -292,7 +292,7 @@ The function also calls a `printMatch()` function that is simply used to print a
 
 This function is vital towards the overall GUI and information presentation of the program. It simply prints all matches and associated url(s) found from the BFS traversal function `crawl()`, `getLinks()`, and the `exData()` functions to GUI:
 
-```
+```python
 def printMatch(title, url, type):
     # As we are passing an array of page titles, go through 
     # each title and clean them up by removing <title> tags.

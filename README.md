@@ -330,6 +330,7 @@ Once the program has finished executing, in theory, the graph data structure con
 
 ![Image of simple BFS at the final stage](http://interactivepython.org/runestone/static/pythonds/_images/bfsDone.png)
 
+The `seed` url has been explored outwards, and for all the black nodes (found urls) within a single layer of html, these have all been explored recursively, extracting html data and searching for external data, whilst printing the yielded data to the terminal each step of the way.
 
 ### Todo List
 
@@ -337,7 +338,7 @@ Once the program has finished executing, in theory, the graph data structure con
 - Provide more keywords for the `exCheck` function
 - Export found and searched information into file as an xml
 - Implement and learn about more core testing methodologies
-
+- Devise a more concise method for extracting additional data 
 
 ### References
 

@@ -6,7 +6,34 @@ Implementing a web crawler from first principles.
 
 Generate a Web Crawler to extract elements and build a simple Sitemap.
 
-### Introduction and background:
+### Compile & Installation
+
+#### Modules
+
+The following modules have been used in the following web crawling program:
+
+- Queue
+- sys
+- time
+- urllib2
+- urlparse
+- BeautifulSoup
+
+These can be installed individually or by running the following Python module install command from within the project root folder:
+
+```
+python setup.py
+```
+
+#### Compile
+
+To compile the program, simply return the following in your terminal, ensuring the latest version of Python is installed:
+
+```
+python CRAWLER.py
+```
+
+### Introduction & Implementation Research:
 
 Web crawler programs are used to scan and parse HTML webpages to return hyperlinks or any other kind of specific HTML document markup. Web crawlers (also known as web spiders) are simple on paper but tremendously tricky in implementation. Overtime, web crawlers have utilised various information retrieval algorithms for industry use, for example, Google and Mircosoft deploy many isolated web crawlers across multiple distributive architectures to maximise many different web crawling techniques.
 
@@ -106,24 +133,9 @@ Much of this is down to Pythons reserved keywords, condoning many fundamental si
 
 In addition to Pythons easy syntactical sugar and natural reserved keywords, Python also offers a fantastic array of external modules to help with Http Requests. In other languages such as JavaScript, it has only been up until recently, that efficient forms and means of Http request communication has been reinforced to a more accurate degree. Furthermore, the implementation of such modules are easy to integrate and additional tools for communicating directly within the computer operating system using I/O is very diverse in comparison to JavaScript. 
 
-### Let's begin...
+### Let's begin!
 
-#### Modules
-
-The following modules have been used in the following web crawling program:
-
-- Queue
-- sys
-- time
-- urllib2
-- urlparse
-- BeautifulSoup
-
-These can be installed individually or by running the following Python module install command from within the project root folder:
-
-```
-python setup.py
-```
+An in depth analysis of the program and its implementation has been conducted and can be found below.
 
 #### Program Architecture
 

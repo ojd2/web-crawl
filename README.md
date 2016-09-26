@@ -1,4 +1,4 @@
-# Py Crawl Web Crawler
+# Py-Crawl
 
 Implementing a web crawler from first principles. 
 

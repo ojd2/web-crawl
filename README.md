@@ -336,6 +336,7 @@ Once the program as finished executing, in theory, the graph data structure cons
 - Move and construct the program into a `self` manifesting class structure and implementation
 - Provide more keywords for the `exCheck` function
 - Export found and searched information into file as an xml
+- Implement and learn about more core testing methodologies
 
 
 ### References

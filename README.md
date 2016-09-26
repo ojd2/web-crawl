@@ -1,7 +1,5 @@
 # Py-Crawl
 
-Implementing a web crawler from first principles. 
-
 ### Task:
 
 Generate a Web Crawler to extract elements and build a simple Sitemap.

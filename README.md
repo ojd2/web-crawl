@@ -6,7 +6,7 @@ Implementing a web crawler from first principles.
 
 Generate a Web Crawler to extract elements and build a simple Sitemap.
 
- ### Introduction and background:
+### Introduction and background:
 
 Web crawler programs are used to scan and parse HTML webpages to return hyperlinks or any other kind of specific HTML document markup. Web crawlers (also known as web spiders) are simple on paper but tremendously tricky in implementation. Overtime, web crawlers have utilised various information retrieval algorithms for industry use, for example, Google and Mircosoft deploy many isolated web crawlers across multiple distributive architectures to maximise many different web crawling techniques.
 

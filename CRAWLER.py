@@ -133,9 +133,9 @@ def exCheck(external_url):
 
 # ------------------------------------------------------------------------------
 # A function to extract data from every url that comes up in our BFS crawl
-# algorithm. Using regular expressions we can extract several types of
-# data using certain regular expression patterns. To generate a simple site 
-# map, we shall just extract the url(s) html <title> tags.
+# algorithm. Using BS4, we can extract several types of data using certain 
+# regular expression patterns. To generate a simple sitemap, we shall just 
+# extract the url(s) html <title> tags.
 # ------------------------------------------------------------------------------
 def exData(url):
     print "|-----> Found URL: ", url
@@ -178,12 +178,3 @@ def printMatch(title, url, type):
 # Callback our Crawler
 # ------------------------------------------------------------------------------
 crawl()
-
-# ------------------------------------------------------------------------------
-# References:
-# ------------------------------------------------------------------------------
-
-# [1] Jitali Patel, Hardik Jethva, "Web Crawling". 2015. 
-# [2] IJIACS. ISSN 2347 8616. Volume 4, Special Issue.
-# [3] http://jakeaustwick.me/python-web-scraping-resource/#requests
-# [4] https://gist.github.com/duggalrahul/6548584

@@ -326,7 +326,7 @@ Crawling in progress...
  -> Found Page Title: GoCardless
  -> Found Page Title: Check
 ```
-Once the program as finished executing, in theory, the graph data structure constructed by the `crawl()` BFS algorithm looks like the graph diagram below:
+Once the program has finished executing, in theory, the graph data structure constructed by the `crawl()` BFS algorithm looks like the graph diagram below:
 
 ![Image of simple BFS at the final stage](http://interactivepython.org/runestone/static/pythonds/_images/bfsDone.png)
 

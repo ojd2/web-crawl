@@ -63,8 +63,7 @@ The Depth First Crawling algorithm utilises the data structure of a 'stack', to 
 
 #### Repetitive Crawling Technique
 
-At a first glance, the repetitive algorithm for web crawling seems self explanatory. A page is fetched from a seed and then hyperlinks are extracted and stored in memory using a crawling algorithm. In many real world use cases, the Repetitive technique is used to keep sitemap indexes up to date. The automation is then repeated over and over again "periodically" overtime. Such implementations of the algorithm + technique of Repetitive Crawling can be found within CMS systems. These are usually integrated into the CMS to capture and fetch any new HTML markup content published on various pages throughout a users website lifetime. 
-
+At a first glance, the repetitive algorithm for web crawling seems self explanatory. A page is fetched from a seed and then hyperlinks are extracted and stored in memory using a crawling algorithm. In many real world use cases, the repetitive technique is used to keep sitemap indexes up to date. The automation is then repeated over and over again "periodically" overtime. Such implementations of the algorithm + technique of Repetitive Crawling can be found within CMS systems. These are usually integrated into the CMS to capture and fetch any new HTML markup content published on various pages throughout a users website lifetime. 
 
 #### Targeted Crawling
 
@@ -72,11 +71,11 @@ Targeted Crawling is a technique that also utilises the Breadth or Depth First c
 
 ## The Crawler Architecture
 
-Volume handle (Usually handled via a depth level)
-Selection Policy (Usually handled via a seed and desired anchor fetcher)
-Re-visit Policy (Mechanism to check for changes and when to revisit HTML pages)
-Politeness Policy (Handle overloading via a request Timeout)
-Parrallelisation (Distributed crawlers but this is for another day...)
+- Volume handle (Usually handled via a depth level)
+- Selection Policy (Usually handled via a seed and desired anchor fetcher)
+- Re-visit Policy (Mechanism to check for changes and when to revisit HTML pages)
+- Politeness Policy (Handle overloading via a request Timeout)
+- Parrallelisation (Distributed crawlers but this is for another day...)
 
 #### Fetching
 
@@ -90,7 +89,7 @@ In most cases, the fetching components control the the following:
 
 The parsing component of a web crawler is vital to its success. The parser usually implements the information retrieval algorithms for searching and traversing through HTML markup to find and locate specific content.
 
-Various information retrieval algorithms are more superior than the other in terms of execution and analysis, however, overall, they all help towards:
+Various information retrieval algorithms are more superior than the others in terms of execution and analysis, however, overall, they all help towards:
 
 	- Stop listing 
 	- Stemming
@@ -129,7 +128,7 @@ DFS(u):
 ```
 Much of this is down to Pythons reserved keywords, condoning many fundamental similarities with such pseudo code. 
 
-In addition to Pythons easy syntactical sugar and natural reserved keywords, Python also offers a fantastic array of external modules to help with Http Requests. In other languages such as JavaScript, it has only been up until recently, that efficient forms and means of Http request communication has been reinforced to a more accurate degree. Furthermore, the implementation of such modules are easy to integrate and additional tools for communicating directly within the computer operating system using I/O is very diverse in comparison to JavaScript. 
+In addition to Pythons easy syntactical sugar and natural reserved keywords, Python also offers a fantastic array of external modules to help with Http Requests. In other languages such as JavaScript, it has only been up until recently, that efficient forms and means of Http request communication has been reinforced to a more accurate degree. Furthermore, the implementation of such modules are easy to integrate and additional tools for communicating directly within the computer operating system using I/O are very diverse in comparison to JavaScript. 
 
 ### Let's begin!
 
@@ -137,7 +136,7 @@ An in depth analysis of the program and its implementation has been conducted an
 
 #### Program Architecture
 
-Following Program Crawls url(s) from the seed domain and traverses through. It then presents a fetched url and its associated html page title and any unwanted external url(s). This is then passed onto a print function to display the found and crawled url(s) and matches to the command GUI. The idea is to crawl using BFS and present any hierarchical site map distinctions. Such as, all the found url(s) from the seed, and then any external likes. The depth level can be adjusted to go deeper, however, this may present problems in execution and performance.
+The following program crawls a url from the seed domain and traverses through. It then presents a fetched url and its associated html page title and any unwanted external url(s). This is then passed onto a print function to display the found and crawled url(s) and matches to the command GUI. The idea is to crawl using BFS and present any hierarchical site map distinctions. Such as, all the found url(s) from the seed, and then any external likes. The depth level can be adjusted to go deeper, however, this may present problems in execution and performance.
 
 The program composition is a series of nested block function structures that individually recall each other recursively. This way, the BFS algorithm could utilise several components in isolation. The following program architecture looks like the following:
 

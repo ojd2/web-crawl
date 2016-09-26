@@ -12,12 +12,12 @@ Generate a Web Crawler to extract elements and build a simple Sitemap.
 
 The following modules have been used in the following web crawling program:
 
-- Queue
-- sys
-- time
-- urllib2
-- urlparse
-- BeautifulSoup
+- `Queue`
+- `sys`
+- `time`
+- `urllib2`
+- `urlparse`
+- `BeautifulSoup`
 
 These can be installed individually or by running the following Python module install command from within the project root folder:
 
